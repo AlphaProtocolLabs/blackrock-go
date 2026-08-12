@@ -26,7 +26,6 @@ import 'package:go_router/go_router.dart';
 import 'package:mapbox_maps_flutter/mapbox_maps_flutter.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:vs_story_designer/vs_story_designer.dart';
 import 'package:blackrock_go/views/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -141,17 +140,7 @@ class MyApp extends StatelessWidget {
             //     );
             //   },
             // ),
-            GoRoute(
-                path: 'storyDesigner',
-                builder: (context, state) => VSStoryDesigner(
-                    onDone: (String uri) {
-                      timelineController.addPostToTimeline(uri);
-                      context.pop();
-                    },
-                    // onDoneButtonStyle: Icon(Icons.done),
-                    mediaPath: state.extra as String,
-                    middleBottomWidget: Container(),
-                    centerText: '')),
+
             GoRoute(
               path: 'eventDetails',
               builder: (context, state) => EventDetailsScreen(

@@ -19,7 +19,7 @@ android {
         applicationId = "com.alphaprotocol.blackrock_go"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdk = 24
+        minSdk = 36
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -32,6 +32,11 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+}
+
+dependencies {
+  implementation("com.mapbox.maps:android-ndk27:11.28.0")
+  
 }
 
 flutter {
